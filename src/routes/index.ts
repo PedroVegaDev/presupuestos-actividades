@@ -1,0 +1,53 @@
+import AppLayout from "@/layouts/AppLayout.vue";
+import Home from "@/pages/Home.vue";
+import Login from "@/pages/Login.vue";
+import Numbers from "@/pages/Numbers.vue";
+import { getCurrentUser } from "@/services/auth";
+import { createRouter, createWebHistory } from "vue-router";
+
+export const routes = createRouter({
+  history: createWebHistory(),
+  routes: [
+    {
+      path: "/login",
+      name: "login",
+      beforeEnter: async () => {
+        const currentUser = await getCurrentUser();
+        if (currentUser)
+          return {
+            name: "home",
+          };
+        return true;
+      },
+      component: Login,
+    },
+    {
+      path: "/",
+      name: "app-layout",
+      beforeEnter: async () => {
+        const currentUser = await getCurrentUser();
+        if (currentUser) return true;
+        return {
+          name: "login",
+        };
+      },
+      component: AppLayout,
+      children: [
+        {
+          path: "presupuestos",
+          name: "home",
+          component: Home,
+        },
+        {
+          path: "numeros",
+          name: "numbers",
+          component: Numbers,
+        },
+      ],
+    },
+    {
+      path: "/:pathMatch(.*)",
+      redirect: "login",
+    },
+  ],
+});
