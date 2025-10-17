@@ -1,9 +1,11 @@
+import CreateDebtor from "@/pages/CreateDebtor.vue";
 import AppLayout from "@/layouts/AppLayout.vue";
 import Home from "@/pages/Home.vue";
 import Login from "@/pages/Login.vue";
 import Numbers from "@/pages/Numbers.vue";
 import { getCurrentUser } from "@/services/auth";
 import { createRouter, createWebHistory } from "vue-router";
+import UpdateDebtor from "@/pages/UpdateDebtor.vue";
 
 export const routes = createRouter({
   history: createWebHistory(),
@@ -37,6 +39,16 @@ export const routes = createRouter({
           path: "presupuestos",
           name: "home",
           component: Home,
+        },
+        {
+          path: "crear-deudor",
+          name: "create-debtor",
+          component: CreateDebtor,
+        },
+        {
+          path: "actualizar-deudor/:index",
+          name: "update-debtor",
+          component: UpdateDebtor,
         },
         {
           path: "numeros",

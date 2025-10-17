@@ -2,13 +2,17 @@
   import Separator from "@/components/ui/separator/Separator.vue";
   import { useActivityStore } from "@/store";
   import DebtorCard from "@/components/DebtorCard.vue";
-  import CreateDebtor from "@/components/CreateDebtor.vue";
+  import { useRouter } from "vue-router";
+  import { Button } from "@/components/ui/button";
 
   const activityStore = useActivityStore();
+  const router = useRouter();
 </script>
 
 <template>
-  <CreateDebtor />
+  <Button class="w-full" @click="() => router.push({ name: 'create-debtor' })">
+    Crear Deudor
+  </Button>
 
   <Separator class="my-4" />
 

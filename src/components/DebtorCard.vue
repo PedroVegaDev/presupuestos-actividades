@@ -3,8 +3,7 @@
   import { Card, CardContent } from "./ui/card";
   import IconCash from "./icons/IconCash.vue";
   import IconDelivered from "./icons/IconDelivered.vue";
-  import { ref } from "vue";
-  import DetailsDebtor from "./DetailsDebtor.vue";
+  import { useRouter } from "vue-router";
 
   interface Props {
     debtor: Debtor;
@@ -12,11 +11,13 @@
   }
 
   const props = defineProps<Props>();
-
-  const openDetails = ref(false);
+  const router = useRouter();
 
   const handleClick = () => {
-    openDetails.value = true;
+    router.push({
+      name: "update-debtor",
+      params: { index: props.indexDebtor },
+    });
   };
 </script>
 
@@ -29,6 +30,7 @@
           {{ props.debtor.quantity }}
           {{ props.debtor.quantity > 1 ? "Turrones" : "Turrón" }}
         </p>
+        <p>S/ {{ props.debtor.quantity * props.debtor.price_modificated! }}</p>
       </div>
 
       <div class="flex-col">
@@ -51,10 +53,4 @@
       </div>
     </CardContent>
   </Card>
-
-  <DetailsDebtor
-    v-model="openDetails"
-    :debtor="props.debtor"
-    :index-debtor="props.indexDebtor"
-  />
 </template>
