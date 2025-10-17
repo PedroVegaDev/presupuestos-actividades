@@ -3,6 +3,7 @@
   import { Input } from "@/components/ui/input";
   import { Label } from "@/components/ui/label";
   import { Separator } from "@/components/ui/separator";
+
   import { logout } from "@/services/auth";
   import { useActivityStore } from "@/store";
   import { useRouter } from "vue-router";
@@ -18,6 +19,44 @@
 
 <template>
   <section class="flex items-center gap-2 mb-4">
+    <Label class="w-full text-md" for="price">Turrones Comprados:</Label>
+    <Input
+      disabled
+      required
+      id="price"
+      type="number"
+      class="w-32"
+      :default-value="activityStore.totalTurrones"
+    />
+  </section>
+
+  <section class="flex items-center gap-2 mb-4">
+    <Label class="w-full text-md" for="price">Turrones Vendidos:</Label>
+    <Input
+      disabled
+      required
+      id="price"
+      type="number"
+      class="w-32"
+      :default-value="activityStore.totalSold"
+    />
+  </section>
+
+  <section class="flex items-center gap-2">
+    <Label class="w-full text-md" for="price">Turrones Restantes:</Label>
+    <Input
+      disabled
+      required
+      id="price"
+      type="number"
+      class="w-32"
+      :default-value="activityStore.totalTurrones - activityStore.totalSold"
+    />
+  </section>
+
+  <Separator class="my-4" />
+
+  <section class="flex items-center gap-2 mb-4">
     <Label class="w-full text-md" for="price">Precio por unidad:</Label>
     <Input
       disabled
@@ -30,7 +69,7 @@
   </section>
 
   <section class="flex items-center gap-2 mb-4">
-    <Label class="w-full text-md" for="price">Faltan pagar:</Label>
+    <Label class="w-full text-md" for="price">Faltan (turrones):</Label>
     <Input
       disabled
       required
@@ -38,6 +77,18 @@
       type="number"
       class="w-32"
       :default-value="activityStore.countNoPayments"
+    />
+  </section>
+
+  <section class="flex items-center gap-2 mb-4">
+    <Label class="w-full text-md" for="price">Faltan pagar (S/):</Label>
+    <Input
+      disabled
+      required
+      id="price"
+      type="number"
+      class="w-32"
+      :default-value="activityStore.totalDontPayment"
     />
   </section>
 
