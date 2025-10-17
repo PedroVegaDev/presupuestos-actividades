@@ -69,7 +69,7 @@
   </section>
 
   <section class="flex items-center gap-2 mb-4">
-    <Label class="w-full text-md" for="price">Faltan (turrones):</Label>
+    <Label class="w-full text-md" for="price">Personas por pagar:</Label>
     <Input
       disabled
       required
