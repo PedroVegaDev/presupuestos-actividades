@@ -14,8 +14,8 @@
   const router = useRouter();
 
   const credentials = reactive({
-    email: "vilma@emprendedora.com",
-    password: "vilmadamian",
+    email: "",
+    password: "",
   });
 
   const handleSignIn = async () => {
