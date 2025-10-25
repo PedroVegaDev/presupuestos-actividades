@@ -15,6 +15,7 @@
   --xanthous: #f0b009ff;
   --jet: #cb7e88ff;
 
+  --radius: 0.625rem;
   --background: var(--white);
   --foreground: var(--jet);
   --card: var(--white);
