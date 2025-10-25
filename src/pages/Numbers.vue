@@ -19,7 +19,7 @@
 
 <template>
   <section class="flex items-center gap-2 mb-4">
-    <Label class="w-full text-md" for="price">Turrones Comprados:</Label>
+    <Label class="w-full text-md" for="price">Papas Compradas:</Label>
     <Input
       disabled
       required
@@ -31,7 +31,7 @@
   </section>
 
   <section class="flex items-center gap-2 mb-4">
-    <Label class="w-full text-md" for="price">Turrones Vendidos:</Label>
+    <Label class="w-full text-md" for="price">Papas Vendidas:</Label>
     <Input
       disabled
       required
@@ -43,7 +43,7 @@
   </section>
 
   <section class="flex items-center gap-2">
-    <Label class="w-full text-md" for="price">Turrones Restantes:</Label>
+    <Label class="w-full text-md" for="price">Papas Restantes:</Label>
     <Input
       disabled
       required
@@ -57,7 +57,7 @@
   <Separator class="my-4" />
 
   <section class="flex items-center gap-2 mb-4">
-    <Label class="w-full text-md" for="price">Precio por unidad:</Label>
+    <Label class="w-full text-md" for="price">Precio por porción:</Label>
     <Input
       disabled
       required

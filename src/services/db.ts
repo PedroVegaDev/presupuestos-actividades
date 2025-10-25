@@ -8,7 +8,7 @@ import {
   arrayRemove,
 } from "firebase/firestore";
 
-const turronesRef = doc(db, "activities", "turrones");
+const turronesRef = doc(db, "activities", "papa_rellena");
 
 export const getDataOfCurrentActivity = async () => {
   try {

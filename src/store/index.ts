@@ -6,7 +6,7 @@ export const useActivityStore = defineStore("activityStore", () => {
   const globalPrice = ref<number>(0);
   const debtorList = ref<Debtor[]>([]);
   const isLoadingData = ref<boolean>(true);
-  const totalTurrones = 40;
+  const totalTurrones = 14;
 
   const countNoPayments = computed(
     () =>

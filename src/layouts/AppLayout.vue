@@ -34,7 +34,7 @@
 
       <ButtonGroup class="mt-auto w-full">
         <Button
-          class="flex-1"
+          class="flex-1 text-gray-700"
           variant="secondary"
           @click="() => router.push({ name: 'home' })"
         >
@@ -42,7 +42,7 @@
         </Button>
         <Separator orientation="vertical" />
         <Button
-          class="flex-1"
+          class="flex-1 text-gray-700"
           variant="secondary"
           @click="() => router.push({ name: 'numbers' })"
         >

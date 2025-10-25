@@ -28,7 +28,7 @@
         <p class="text-lg font-semibold">{{ props.debtor.name }}</p>
         <p>
           {{ props.debtor.quantity }}
-          {{ props.debtor.quantity > 1 ? "Turrones" : "Turrón" }}
+          {{ props.debtor.quantity > 1 ? "Papas" : "Papa" }}
         </p>
         <p>S/ {{ props.debtor.quantity * props.debtor.price_modificated! }}</p>
       </div>

@@ -31,7 +31,7 @@
       <CardHeader>
         <img
           class="w-32 mx-auto"
-          src="/logo-grupo-joel.png"
+          src="/logo-papa-rellena.png"
           alt="Logo Grupo Joel"
         />
       </CardHeader>

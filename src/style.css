@@ -4,10 +4,16 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  /* Colors for papa rellena
+  --xanthous: #f0b009ff;
+  --kelly-green: #3da501ff;
+  --alabaster: #e5e8e1ff;
+  --old-rose: #cb7e88ff; */
+
   --white: #fefefeff;
-  --federal-blue: #251b60ff;
-  --xanthous: #f4b223ff;
-  --jet: #2f2f2fff;
+  --federal-blue: #3da501ff;
+  --xanthous: #f0b009ff;
+  --jet: #cb7e88ff;
 
   --background: var(--white);
   --foreground: var(--jet);
