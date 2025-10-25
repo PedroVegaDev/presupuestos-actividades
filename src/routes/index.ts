@@ -36,6 +36,11 @@ export const routes = createRouter({
       component: AppLayout,
       children: [
         {
+          path: "",
+          name: "redirect-home",
+          redirect: "presupuestos",
+        },
+        {
           path: "presupuestos",
           name: "home",
           component: Home,
